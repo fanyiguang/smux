@@ -19,7 +19,7 @@ func TestShaper(t *testing.T) {
 	heap.Push(&reqs, w2)
 	heap.Push(&reqs, w1)
 
-	var lastPrio = reqs[0].prio
+	lastPrio := reqs[0].prio
 	for len(reqs) > 0 {
 		w := heap.Pop(&reqs).(writeRequest)
 		if int32(w.prio-lastPrio) < 0 {

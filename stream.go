@@ -288,7 +288,6 @@ func (s *Stream) waitRead() error {
 	case <-s.die:
 		return io.ErrClosedPipe
 	}
-
 }
 
 // Write implements net.Conn
